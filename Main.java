@@ -9,17 +9,19 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Enter your name please");
         int i;
-        Cat[] cats = new Cat[] {new Cat("Barsik",12,10,10),
-                                new NyanCat("Debil","Kartoshkin", 15, 15, 15 )
+        Cat[] cats = new Cat[]{new Cat("Barsik", 12, 10, 10),
+                new NyanCat("Debil", "Kartoshkin", 15, 15, 15, "<3")
         };
 
         Scanner user = new Scanner(System.in);
         String username = user.nextLine();
         String love = "<3";
 
-        for (i = 0; i < 2 ; ++i) {
-            cats[i].sayMeow(System.out, username);
-            cats[i].sayAbout(System.out);
+        for (i = 0; i < 2; ++i) {
+            if (i < 2){
+                cats[i].sayMeow(System.out, username);
+            cats[i].sayAbout(System.out);}
+
         }
     }
 }

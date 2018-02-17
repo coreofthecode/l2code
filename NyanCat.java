@@ -4,20 +4,31 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 public class NyanCat extends Cat {
-   NyanCat(String name, String surname , int weight  , int age ,int taillenght){
-       super();
-        this.name = name ;
+    NyanCat(String name, String surname, int weight, int age, int taillenght, String love) {
+        super();
+        this.name = name;
         this.surname = surname;
         this.weight = weight;
         this.age = age;
         this.taillenght = taillenght;
+        this.love = love;
     }
 
     public void sayMeow(PrintStream out, String userName) {
-        out.println("Meow, my lovely " + userName + "! ");
+        out.println("Meow, my lovely " + userName + "! " + getLove());
     }
 
-    private String surname = "Huevkrutov";
+    private String love;
+
+    public String getLove() {
+        return this.love;
+    }
+
+    public void setLove() {
+        this.love = love;
+    }
+
+    private String surname;
 
     public String getSurname() {
         return this.surname;
